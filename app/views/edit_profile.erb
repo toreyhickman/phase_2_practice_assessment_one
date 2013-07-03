@@ -1,0 +1,45 @@
+<div class="container">
+  <h1>Edit Profile: <%= @user.name %></h1>
+  
+  <p><strong>Please select all of the skills that you have.</strong></p>
+  <br>
+
+
+  <div class="skill_edit"><strong>Skill</strong></div>
+  <div class="years_edit"><strong>Years</strong></div>
+  <div class="formal_edit"><strong>Formal?</strong></div>
+  <br>
+
+
+  <form action="/update/<%= @user.id %>" method="post">
+    <% @skills.each do |skill| %>
+
+      <div class="skill_list">
+
+        <div class="skill_edit">
+          <input  type="checkbox" 
+                  name="skill" 
+                  value="<%= skill.id %>" 
+                  <%= "checked='yes'" if @user.skills.include?(skill) %> >
+          <span><%= skill.name %></span>
+        </div>
+
+        <div class="years_edit">
+          <input type="text">
+        </div>
+
+        <div class="formal_edit">
+          <input  type="checkbox" 
+                  name="formal"
+                  value="true" 
+                  <%= "checked='yes'" if @user.skills.include?(skill) && @user.proficiencies.where("skill_id = ?", <%= skill.id %>).formal == "true" >
+        </div>
+      
+      </div>
+
+
+    <% end %>
+
+  </form>
+
+</div>

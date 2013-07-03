@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>User Profile: Skills and Levels</h1>
+
+  <div class="name"><strong>Name</strong></div>
+  <div class="skill"><strong>Skill</strong></div>
+  <div class="years"><strong>Years</strong></div>
+  <div class="formal"><strong>Formal?</strong></div>
+
+
+    <div class="user_wrap">
+      <div class="name">
+        <p><%= @user.name %></p>      
+      </div>
+
+      <div class="skill">
+        <% @user.skills.each do |skill| %>
+          <p><%= skill.name %></p>
+        <% end %>
+      </div>
+
+      <div class="years">
+        <% @user.proficiencies.each do |proficiency| %>
+          <p><%= proficiency.years %></p>
+        <% end %>
+      </div>
+
+      <div class="formal">
+        <% @user.proficiencies.each do |proficiency| %>
+          <p><%= proficiency.formal == true ? "yes" : "no" %></p>
+        <% end %>
+      </div>
+    </div>
+
+    <div class="edit_option">
+      <a href="/edit_profile/<%= @user.id %>"><%= "edit your profile" if @user.id == session[:user_id] %></a>
+    </div>
+
+</div>

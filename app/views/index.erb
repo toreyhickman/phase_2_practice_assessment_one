@@ -1,0 +1,38 @@
+<div class="container">
+  <h1>User Skills and Levels</h1>
+
+  <div class="name"><strong>Name</strong></div>
+  <div class="skill"><strong>Skill</strong></div>
+  <div class="years"><strong>Years</strong></div>
+  <div class="formal"><strong>Formal?</strong></div>
+
+
+  <% @users.each do |user| %>
+    <div class="user_wrap">
+    
+      <div class="name">
+        <p><a href="/profile/<%= user.id %>"><%= user.name %></a></p>      
+      </div>
+
+      <div class="skill">
+        <% user.skills.each do |skill| %>
+          <p><%= skill.name %></p>
+        <% end %>
+      </div>
+
+      <div class="years">
+        <% user.proficiencies.each do |proficiency| %>
+          <p><%= proficiency.years %></p>
+        <% end %>
+      </div>
+
+      <div class="formal">
+        <% user.proficiencies.each do |proficiency| %>
+          <p><%= proficiency.formal == true ? "yes" : "no" %></p>
+        <% end %>
+      </div>
+
+    </div>
+  <% end %>
+  <%# TODO: display the skills and proficiency levels for each user ... %>
+</div>

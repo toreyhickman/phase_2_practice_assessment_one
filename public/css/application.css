@@ -1,0 +1,142 @@
+.container {
+  margin: 20px auto;
+  width: 800px;
+  padding: 0px 20px 20px 20px;
+  /*border: 1px dotted black;*/
+}
+
+.container h1 {
+  font-size: 17pt;
+  margin-bottom: 32px;
+
+}
+
+nav {
+  width: 100%;
+  height: 40px;
+  font-weight: bold;
+}
+
+nav .brand, nav .brand a {
+  margin-left: 25px;
+  font-size: 18pt;
+  text-decoration: none;
+  color: #444;
+  width: 60%;
+  display: inline-block;
+}
+
+nav ul {
+  display: inline-block;
+  width: 30%;
+  text-align: right;
+}
+
+nav li {
+  margin-right: 25px;
+  display: inline;
+}
+
+nav li a {
+  color: gray;
+  text-decoration: none;
+}
+
+nav li a:hover {
+  text-decoration: underline;
+}
+
+form label {
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+input {
+  margin-bottom: 10px;
+}
+
+.errors {
+  color: red;
+}
+
+form.quirks {
+  display: inline-block;
+}
+
+.submit {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  float: left;
+  text-align: right;
+  margin-right: 20px;
+  width: 200px;
+}
+
+.user_wrap {
+  float: left;
+  width: 800px;
+  overflow: hidden;
+  border-top: 1px dotted black;
+}
+
+.name {
+  width: 40%;
+  float: left;
+  text-align: left;
+}
+
+.skill {
+  width: 30%%;
+  float: left;
+  text-align: left;
+}
+
+.years {
+  width: 15%%;
+  float: left;
+  text-align: left;
+}
+
+.formal {
+  width: 15%%;
+  float: left;
+  text-align: left;
+}
+
+.edit_option {
+  margin-top: 48px;
+  width: 800px;
+  float: left;
+  text-align: center;
+}
+
+form {
+  margin-top: 24px;
+}
+
+form span {
+  padding-left: 8px;
+}
+
+.skill_list {
+  width: 800px;
+  overflow: hidden;
+}
+
+.skill_edit {
+  width: 40%;
+  float: left;
+}
+
+.years_edit {
+  width: 30%;
+  float: left;
+}
+
+.formal_edit {
+  width: 30%;
+  float: left;
+}
